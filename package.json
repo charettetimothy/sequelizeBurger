@@ -1,0 +1,26 @@
+{
+  "name": "eatdaburger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charettetimothy/EatDaBurger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charettetimothy/EatDaBurger/issues"
+  },
+  "homepage": "https://github.com/charettetimothy/EatDaBurger#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0",
+    "sequelize": "^4.42.0"
+  }
+}

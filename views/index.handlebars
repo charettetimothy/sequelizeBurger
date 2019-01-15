@@ -1,0 +1,35 @@
+<h1>EatDaBurger</h1>
+
+<img src="/assets/css/hamburger.png" alt="hamburger">
+
+<h2>Burgers To Consume:</h2>
+
+<ul>
+  {{#each burger_data}}
+  {{#unless this.devoured}}
+  <button id={{this.id}} class="updateBurger">Devour</button>
+  {{this.burger_name}}
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers Consumed:</h2>
+
+<ul>
+  {{#each burger_data}}
+  {{#if this.devoured}}
+  {{this.burger_name}}
+  {{/if}}
+  {{/each}}
+</ul>
+{{!-- button in handlebars for toggle and put route into burger controller --}}
+
+<h2>Add a Burger</h2>
+
+<form class="create-form" action="/burgers/create" method="POST">
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="burger_name">
+  </div>
+  <button type="submit">Add Burger</button>
+</form>
