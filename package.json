@@ -1,26 +1,28 @@
 {
-  "name": "eatdaburger",
+  "name": "sequelizedburger",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). This uses the MVC design pattern; using Node and MySQL to query and route data, and Handlebars (templating software) to generate the HTML.",
   "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/charettetimothy/EatDaBurger.git"
+    "url": "git+https://github.com/charettetimothy/sequelizeBurger.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/charettetimothy/EatDaBurger/issues"
+    "url": "https://github.com/charettetimothy/sequelizeBurger/issues"
   },
-  "homepage": "https://github.com/charettetimothy/EatDaBurger#readme",
-  "dependencies": {
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.0",
-    "mysql": "^2.16.0",
-    "sequelize": "^4.42.0"
-  }
+  "homepage": "https://github.com/charettetimothy/sequelizeBurger#readme"
 }

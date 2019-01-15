@@ -29,7 +29,7 @@
 
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const burger_model = sequelize.define('burger_model', {
+  const burgers = sequelize.define('burgers', {
     burger_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -40,9 +40,9 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: 0
     }
   }, {});
-  burger_model.associate = function (models) {
+  burgers.associate = function (models) {
 
   };
-  return burger_model;
+  return burgers;
 };
 // Export the database functions for the controller (catsController.js).
