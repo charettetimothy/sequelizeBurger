@@ -1,4 +1,4 @@
-// Import the ORM to create functions that will 
+// Import the ORM to create functions that will
 // interact with the database.
 // var orm = require("../config/orm.js");
 // var burger = {
@@ -27,22 +27,32 @@
 //   }
 // };
 
-'use strict';
+"use strict";
 module.exports = (sequelize, DataTypes) => {
-  const burgers = sequelize.define('burgers', {
-    burger_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+  const burgers = sequelize.define(
+    "burgers",
+    {
+      burger_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      devoured: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: 0
+      },
+      createdAt: {
+        field: "createdAt",
+        type: DataTypes.DATE
+      },
+      updatedAt: {
+        field: "updatedAt",
+        type: DataTypes.DATE
+      }
     },
-    devoured: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: 0
-    }
-  }, {});
-  burgers.associate = function (models) {
-
-  };
+    {}
+  );
+  burgers.associate = function(models) {};
   return burgers;
 };
 // Export the database functions for the controller (catsController.js).
